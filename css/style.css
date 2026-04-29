@@ -165,3 +165,33 @@ footer {
         font-size: 2rem;
     }
 }
+
+.skills {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.skill {
+    margin: 15px 0;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.bar {
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 10px;
+    background: #2563eb;
+}
+
+.card {
+    border: 1px solid rgba(255,255,255,0.05);
+}
