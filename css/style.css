@@ -96,9 +96,7 @@ body {
 
 /* ANIMAÇÃO */
 .fade {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 1s;
+    opacity: 1 !important;
 }
 
 .fade.show {
