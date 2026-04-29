@@ -31,21 +31,26 @@ async function carregarRepos() {
     }
 }
 
-carregarRepos();
+// 🔥 TUDO SÓ DEPOIS QUE A PÁGINA CARREGAR
+window.addEventListener("DOMContentLoaded", () => {
 
-// ANIMAÇÃO
-const elements = document.querySelectorAll(".fade");
+    carregarRepos();
 
-function ativarAnimacao() {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screen = window.innerHeight;
+    const elements = document.querySelectorAll(".fade");
 
-        if (position < screen - 100) {
-            el.classList.add("show");
-        }
-    });
-}
+    function ativarAnimacao() {
+        elements.forEach(el => {
+            const position = el.getBoundingClientRect().top;
+            const screen = window.innerHeight;
 
-window.addEventListener("scroll", ativarAnimacao);
-window.addEventListener("load", ativarAnimacao);
+            if (position < screen - 100) {
+                el.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", ativarAnimacao);
+
+    // roda uma vez ao carregar
+    ativarAnimacao();
+});
