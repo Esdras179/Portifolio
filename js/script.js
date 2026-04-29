@@ -43,3 +43,22 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+const elements = document.querySelectorAll(".fade");
+
+function ativarAnimacao() {
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const screen = window.innerHeight;
+
+        if (position < screen - 100) {
+            el.classList.add("show");
+        }
+    });
+}
+
+// scroll
+window.addEventListener("scroll", ativarAnimacao);
+
+// carga inicial (ESSENCIAL)
+window.addEventListener("load", ativarAnimacao);
