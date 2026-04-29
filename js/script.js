@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
         }
     });
 });
-
+// animação
 const elements = document.querySelectorAll(".fade");
 
 function ativarAnimacao() {
@@ -53,8 +53,6 @@ function ativarAnimacao() {
 
         if (position < screen - 100) {
             el.classList.add("show");
-        } else {
-            el.classList.remove("show"); // opcional (efeito reaparecer)
         }
     });
 }
@@ -62,11 +60,5 @@ function ativarAnimacao() {
 // roda no scroll
 window.addEventListener("scroll", ativarAnimacao);
 
-// 🔥 ESSENCIAL: roda ao carregar
-window.addEventListener("DOMContentLoaded", ativarAnimacao);
-
-// scroll
-window.addEventListener("scroll", ativarAnimacao);
-
-// carga inicial (ESSENCIAL)
+// roda ao carregar
 window.addEventListener("load", ativarAnimacao);
