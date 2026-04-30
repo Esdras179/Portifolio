@@ -152,3 +152,10 @@ body {
     font-size: 2rem;
     cursor: pointer;
 }
+
+footer {
+    background: #020617;
+    padding: 20px;
+    text-align: center; /* 🔥 ISSO CENTRALIZA */
+    color: #64748b;
+}
