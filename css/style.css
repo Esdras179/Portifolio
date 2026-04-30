@@ -10,6 +10,18 @@ body {
     color: #e2e8f0;
 }
 
+footer {
+    background: #020617;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #64748b;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.9rem;
+}
+
 /* HERO */
 .hero {
     height: 100vh;
