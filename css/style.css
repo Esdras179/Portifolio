@@ -10,6 +10,16 @@ body {
     color: #e2e8f0;
 }
 
+footer {
+    background: #020617;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    text-align: center;
+    color: #64748b;
+}
+
 /* HERO */
 .hero {
     height: 100vh;
@@ -151,14 +161,4 @@ body {
     bottom: 20px;
     font-size: 2rem;
     cursor: pointer;
-}
-
-footer {
-    background: #020617;
-    padding: 20px;
-    display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
-    text-align: center;
-    color: #64748b;
 }
