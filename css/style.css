@@ -3,23 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
-} 
+}
 
 body {
     background: #0f172a;
     color: #e2e8f0;
-}
-
-footer {
-    background: #020617;
-    padding: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #64748b;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    font-size: 0.9rem;
 }
 
 /* HERO */
@@ -75,10 +63,6 @@ footer {
     position: relative;
 }
 
-.navbar a:visited {
-    color: #e2e8f0;
-}
-
 .navbar a:hover {
     color: #60a5fa;
 }
@@ -98,7 +82,6 @@ footer {
     width: 100%;
 }
 
-/* 🔥 LINK ATIVO */
 .navbar a.active {
     color: #60a5fa;
 }
@@ -163,4 +146,14 @@ footer {
     bottom: 20px;
     font-size: 2rem;
     cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #64748b;
 }
