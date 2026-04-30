@@ -1,4 +1,3 @@
-// SCROLL SUAVE
 function scrollToSection() {
     document.querySelector("#sobre").scrollIntoView({
         behavior: "smooth"
@@ -7,9 +6,7 @@ function scrollToSection() {
 
 window.addEventListener("DOMContentLoaded", () => {
 
-    // =========================
-    // GITHUB API
-    // =========================
+    // GITHUB
     async function carregarRepos() {
         try {
             const response = await fetch("https://api.github.com/users/Esdras179/repos");
@@ -37,9 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     carregarRepos();
 
-    // =========================
     // ANIMAÇÃO
-    // =========================
     const elements = document.querySelectorAll(".fade");
 
     function ativarAnimacao() {
@@ -53,9 +48,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =========================
     // MENU ATIVO
-    // =========================
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".navbar a");
 
@@ -81,15 +74,11 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =========================
-    // EVENTOS
-    // =========================
     window.addEventListener("scroll", () => {
         ativarAnimacao();
         ativarMenu();
     });
 
-    // roda ao carregar
     ativarAnimacao();
     ativarMenu();
 });
