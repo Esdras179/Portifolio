@@ -83,6 +83,34 @@ window.addEventListener("DOMContentLoaded", () => {
 
     carregarRepos();
 
+    // LANterna no topo da página
+    function ativarLanterna() {
+        const hero = document.querySelector('.hero');
+        const lanterna = document.querySelector('.flashlight');
+
+        if (!hero || !lanterna) return;
+
+        hero.addEventListener('mousemove', (event) => {
+            const rect = hero.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            lanterna.style.left = `${x}px`;
+            lanterna.style.top = `${y}px`;
+            lanterna.classList.add('active');
+        });
+
+        hero.addEventListener('mouseleave', () => {
+            lanterna.classList.remove('active');
+        });
+
+        hero.addEventListener('mouseenter', () => {
+            lanterna.classList.add('active');
+        });
+    }
+
+    ativarLanterna();
+
     function aplicarTemaHorario() {
         const body = document.body;
         const hora = new Date().getHours();
