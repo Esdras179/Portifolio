@@ -101,6 +101,25 @@ body.night {
     opacity: 0.7;
 }
 
+.flashlight {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) 12%, transparent 35%);
+    opacity: 0;
+    mix-blend-mode: screen;
+    transition: opacity 0.25s ease;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.flashlight.active {
+    opacity: 1;
+}
+
 .hero-card {
     position: relative;
     z-index: 2;
