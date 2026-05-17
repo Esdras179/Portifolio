@@ -76,8 +76,8 @@ body.night {
     justify-content: center;
     position: relative;
     text-align: center;
-    flex-direction: column;
-    gap: 30px;
+    overflow: hidden;
+    padding: 0 20px;
 }
 
 .hero::before {
@@ -88,9 +88,149 @@ body.night {
     background: linear-gradient(to bottom, var(--hero-start), var(--hero-end));
 }
 
-.hero .content {
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.25), transparent 60%);
+    top: 20%;
+    right: -120px;
+    filter: blur(20px);
+    opacity: 0.7;
+}
+
+.hero-card {
     position: relative;
     z-index: 2;
+    max-width: 720px;
+    width: 100%;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 30px 90px rgba(0,0,0,0.18);
+    border-radius: 28px;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.hero-tag {
+    display: inline-flex;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.95);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.hero-card h1 {
+    margin: 0;
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+}
+
+.hero-card p {
+    margin: 0;
+    color: rgba(255,255,255,0.9);
+    font-size: 1.05rem;
+    max-width: 720px;
+}
+
+.hero-subtitle {
+    max-width: 650px;
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 18px 40px rgba(251, 146, 60, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 50px rgba(251, 146, 60, 0.35);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 2;
+    color: rgba(255,255,255,0.95);
+    text-shadow: 0 0 12px rgba(255,255,255,0.35);
+    animation: bounce 2.4s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+@media (max-width: 768px) {
+    .hero-card {
+        padding: 35px 25px;
+    }
+
+    .hero-card p,
+    .hero-subtitle {
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-card {
+        padding: 28px 20px;
+    }
+
+    .hero-card h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-actions {
+        gap: 12px;
+    }
 }
 
 /* HORA E DATA */
